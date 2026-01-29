@@ -6,10 +6,12 @@
 }
 
 /* ===== BASE ===== */
-body {
+html, body {
   font-family: 'Poppins', sans-serif;
-  background: black;
+  background-color: black;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 h1, h2 {
@@ -93,100 +95,14 @@ section img {
   box-shadow: 0 0 20px blue;
 }
 
-section h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-}
-
-section p {
-  font-size: 18px;
-  max-width: 500px;
-  line-height: 1.6;
-}
-
-section button {
-  background-color: blue;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 20px;
-  transition: 0.3s;
-}
-
-section button:hover {
-  background-color: darkblue;
-  transform: scale(1.05);
-}
-
 /* ===== CARROSSEL ===== */
 .carrossel {
   width: 50%;
   max-width: 800px;
-  margin: 300px auto;
+  margin: 200px auto;
   overflow: hidden;
   border-radius: 15px;
-  position: relative;
 }
-
-.slides {
-  width: 300%;
-  height: 400px;
-  display: flex;
-}
-
-.slides input {
-  display: none;
-}
-
-.slide {
-  width: 100%;
-  transition: 0.6s;
-  text-align: center;
-}
-
-.slide img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.slide p {
-  margin-top: 10px;
-  font-size: 20px;
-  color: white;
-}
-
-/* ===== NAVEGAÇÃO CARROSSEL ===== */
-.navegacao-manual {
-  position: absolute;
-  width: 100%;
-  bottom: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.manual-btn {
-  border: 2px solid blue;
-  padding: 6px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.manual-btn:hover {
-  background-color: blue;
-}
-
-/* ===== SLIDES ===== */
-#slide1:checked ~ .primeiro { margin-left: 0; }
-#slide2:checked ~ .primeiro { margin-left: -100%; }
-#slide3:checked ~ .primeiro { margin-left: -200%; }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
@@ -219,39 +135,14 @@ section button:hover {
     text-align: center;
   }
 
-  .meu-nome h1 {
-    font-size: 26px;
-  }
-
   section {
     flex-direction: column;
     padding: 30px 20px;
     text-align: center;
   }
 
-  section img {
-    width: 200px;
-    height: 200px;
-  }
-
-  section h2 {
-    font-size: 22px;
-  }
-
-  section p {
-    font-size: 15px;
-  }
-
   .carrossel {
     width: 95%;
     margin: 60px auto;
-  }
-
-  .slide img {
-    height: 200px;
-  }
-
-  .slide p {
-    font-size: 15px;
   }
 }
