@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+.principal {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+  
+   
+  background-color: black;
+    background-image: url("imagens/fundo.jpg");
+    background-size: cover;        
+    background-position: top right; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center;
+  }
+    
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+
+
+}
+h1{
+  color: aliceblue;
+
+}
+.portfolio{
+    color: whitesmoke;
+    font-size:45px ;
+}
+.portfolio span {
+  color: blue;
+}
+.meu-nome {
+  position: absolute;
+  top:50% ;
+  left: 10%;
+
+ }
+ .meu-nome span {
+  color: blue;
+
+ }
+ nav ul li a {
+  color: blue;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:visited {
+  color: blue;
+}
+
+nav ul li a:hover {
+  color: lightblue;
+  transform: scale(1.05);
+}
+
+nav ul li a:active {
+  color: blue;
+}
+ li {
+
+  color: whitesmoke;
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 30px ;
+  cursor: pointer;
+  
+ 
+ }
+ li:hover {
+  color: blue;
+  transition: 0.5s;
+  transform: scale(1.1);s
+ }
+ 
+ 
+ section {
+  display: flex ;
+ }
+ body {
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2 {
+  text-shadow: 2px 2px 5px black;
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  .meu-nome {
+    top: 40%;
+    text-align: center;
+    left: 0;
+    width: 100%;
+  }
+}
+section {
+  display: flex;               
+  align-items: center;         
+  justify-content: center;    
+  gap: 40px;                   
+  padding: 80px 50px;         
+  background-color: #111;      
+  color: white;               
+}
+
+
+section img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;          
+  object-fit: cover;
+  object-position: centers;          
+  border: 3px solid blue;      
+  box-shadow: 0 0 20px blue;   /
+}
+
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;   
+}
+
+
+section p {
+  font-size: 18px;
+  line-height: 1.6;       
+  max-width: 500px;          
+}
+
+
+section button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+section button:hover {
+  background-color: darkblue;
+  transform: scale(1.05);      */
+}
+
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;     
+    text-align: center;s
+  }
+
+  section img {
+    margin-bottom: 20px;
+  }
+}
+.carrossel {
+  width: 50%;
+  max-width: 800px;
+  margin: 300px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+}
+
+.slides {
+  width: 300%;
+  height: 400px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 100%;
+  transition: 0.6s;
+  position: relative;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.slide p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: white;
+}
+
+/* Botões manuais */
+.navegacao-manual {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.manual-btn {
+  border: 2px solid blue;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.manual-btn:hover {
+  background-color: blue;
+}
+
+/* Movimentação dos slides */
+#slide1:checked ~ .primeiro {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .primeiro {
+  margin-left: -100%;
+}
+
+#slide3:checked ~ .primeiro {
+  margin-left: -200%;
+}
+
+/* Animação automática (opcional) */
+@keyframes slide {
+  0%, 33% { margin-left: 0; }
+  34%, 66% { margin-left: -100%; }
+  67%, 100% { margin-left: -200%; }
+}
